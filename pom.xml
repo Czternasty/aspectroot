@@ -82,46 +82,6 @@
           </execution>
         </executions>
       </plugin>
-      <!--<plugin>
-        &lt;!&ndash; for weaving jars : http://mojo.codehaus.org/aspectj-maven-plugin/weaveJars.html &ndash;&gt;
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>aspectj-maven-plugin</artifactId>
-        <version>1.8</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjtools</artifactId>
-            <version>1.8.9</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-          <Xlint>ignore</Xlint>
-          <complianceLevel>${java.version}</complianceLevel>
-          <encoding>UTF-8</encoding>
-          <showWeaveInfo>false</showWeaveInfo>
-          <verbose>false</verbose>
-          <sources>
-            <source>
-              <basedir>${project.basedir}/src</basedir>
-              <includes>
-                <include>**/*.java</include>
-                <include>**/*.aj</include>
-              </includes>
-            </source>
-          </sources>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>process-sources</phase>
-            <goals>
-              <goal>compile</goal>
-              <goal>test-compile</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>-->
     </plugins>
   </build>
 
