@@ -16,7 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="aspectroot" target="1.8.0_152-release" />
+      <module name="aspectroot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

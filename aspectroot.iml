@@ -2,7 +2,13 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="AspectJ" name="AspectJ">
-      <configuration />
+      <configuration>
+        <option name="aspectPath">
+          <module>
+            <option name="name" value="aspectroot" />
+          </module>
+        </option>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
