@@ -9,29 +9,33 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Aspectroot</name>
-
-
   <dependencies>
-    <dependency>
-      <groupId>net.czternasty</groupId>
-      <artifactId>aspectroot</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjrt</artifactId>
-      <version>1.8.9</version>
-      <scope>compile</scope>
+      <version>1.8.7</version>
     </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjtools</artifactId>
-      <version>1.8.9</version>
-      <scope>compile</scope>
+      <version>1.8.7</version>
     </dependency>
   </dependencies>
 
   <build>
+    <sourceDirectory>
+      src
+    </sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <includes>
+          <include>**/*.ftl</include>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <version>3.5.1</version>
@@ -51,17 +55,16 @@
           <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjtools</artifactId>
-            <version>1.8.9</version>
+            <version>1.8.7</version>
           </dependency>
         </dependencies>
         <configuration>
-          <complianceLevel>1.8</complianceLevel>
           <source>1.8</source>
           <target>1.8</target>
           <Xlint>ignore</Xlint>
           <complianceLevel>${java.version}</complianceLevel>
           <encoding>UTF-8</encoding>
-          <showWeaveInfo>false</showWeaveInfo>
+          <showWeaveInfo>true</showWeaveInfo>
           <verbose>false</verbose>
           <sources>
             <source>
@@ -75,18 +78,16 @@
         </configuration>
         <executions>
           <execution>
-            <phase>process-sources</phase>
+            <phase>integration-test</phase>
             <configuration>
-              <complianceLevel>1.8</complianceLevel>
               <source>1.8</source>
               <target>1.8</target>
               <encoding>utf-8</encoding>
-              <showWeaveInfo>false</showWeaveInfo>
+              <showWeaveInfo>true</showWeaveInfo>
               <Xlint>ignore</Xlint>
             </configuration>
             <goals>
               <goal>compile</goal>
-              <goal>test-compile</goal>
             </goals>
           </execution>
         </executions>
