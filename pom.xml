@@ -32,6 +32,9 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>
+      src
+    </sourceDirectory>
     <plugins>
       <plugin>
         <version>3.5.1</version>
